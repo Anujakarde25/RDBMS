@@ -1,0 +1,139 @@
+BEGIN
+DBMS_OUTPUT.PUT_LINE('HELLO');
+END;
+/
+
+
+DECLARE
+num1 int;
+num2 int;
+ans int;
+BEGIN
+num1:=50;
+num2:=90;
+ans:=num1+num2;
+DBMS_OUTPUT.PUT_LINE('Addition='|| ans);
+END;
+/
+
+DECLARE
+num1 int;
+num2 int;
+ans int;
+BEGIN
+num1:=10;
+num2:=20;
+ans:=num1*num2;
+DBMS_OUTPUT.PUT_LINE('Multiplication='|| ans);
+END;
+/
+
+DECLARE
+num1 int;
+num2 int;
+add int;
+sub int;
+mult int;
+div float;
+BEGIN
+num1:=30;
+num2:=70;
+add:=num1+num2;
+sub:=num1-num2;
+mult:=num1*num2;
+div:=num1/num2;
+DBMS_OUTPUT.PUT_LINE('Addition='|| add);
+DBMS_OUTPUT.PUT_LINE('Substraction='|| sub);
+DBMS_OUTPUT.PUT_LINE('multiplication='|| mult);
+DBMS_OUTPUT.PUT_LINE('Division='|| div);
+END;
+/
+
+DECLARE
+A float;
+R float;
+BEGIN
+R:=5.3;
+A:=3.14*R*R;
+DBMS_OUTPUT.PUT_LINE('area of circle='|| A);
+END;
+/
+
+
+DECLARE
+B float;
+H float;
+A float;
+BEGIN
+B:=2.9;
+H:=12.7;
+A:=B*H/2;
+DBMS_OUTPUT.PUT_LINE('area of triangle='|| A);
+END;
+/
+
+DECLARE
+A int;
+B int;
+AM float;
+HM float;
+BEGIN
+A:=10;
+B:=20;
+AM:=A+B/2;
+HM:=2*A*B/A+B;
+DBMS_OUTPUT.PUT_LINE('arithmetic mean='|| AM);
+DBMS_OUTPUT.PUT_LINE('harmonic mean='|| HM);
+END;
+/
+
+DECLARE
+V float;
+R float;
+H float;
+BEGIN
+R:=9.13;
+H:=12.5
+V:=3.14*R*R*H;
+DBMS_OUTPUT.PUT_LINE('volume of cylinder='|| V);
+END;
+/
+
+DECLARE
+V float;
+R float;
+BEGIN
+R:=9.13;
+V:=4/3*3.14*R*R*R;
+DBMS_OUTPUT.PUT_LINE('volume of sphere='|| V);
+END;
+/
+
+DECLARE
+L float;
+W float;
+A float;
+BEGIN
+L:=7.9;
+W:=9.7;
+A:=W*L;
+DBMS_OUTPUT.PUT_LINE('area of rectangle='|| A);
+END;
+/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
