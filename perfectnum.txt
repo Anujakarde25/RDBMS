@@ -1,0 +1,22 @@
+DECLARE
+i int;
+n int;
+s int;
+BEGIN
+n:=&n;
+i:=1;
+s:=0;
+LOOP
+IF n MOD i=0 THEN
+s:=s+i;
+END IF;
+i:=i+1;
+EXIT WHEN i>=n;
+END LOOP;
+IF n=s THEN
+DBMS_OUTPUT.PUT_LINE('number is perfect');
+ELSE
+DBMS_OUTPUT.PUT_LINE('number is not perfect');
+END IF;
+END;
+/
