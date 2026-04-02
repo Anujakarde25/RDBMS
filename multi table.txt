@@ -1,0 +1,16 @@
+DECLARE
+num int;
+i int;
+ans int;
+BEGIN
+num:=&num;
+i:=1;
+LOOP
+ans:=num*i;
+DBMS_OUTPUT.PUT_LINE('Table='||ans);
+i:=i+1;
+EXIT WHEN i>10;
+END LOOP;
+END;
+/
+

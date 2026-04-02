@@ -1,0 +1,16 @@
+DECLARE
+fact int;
+i int;
+num int;
+BEGIN
+fact:=1;
+num:=&num;
+i:=1;
+LOOP
+fact:=fact*i;
+i:=i+1;
+EXIT WHEN i>num;
+END LOOP;
+DBMS_OUTPUT.PUT_LINE('Factorial='||fact);
+END;
+/

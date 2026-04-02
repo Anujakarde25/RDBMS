@@ -1,0 +1,11 @@
+DECLARE
+i int;
+begin
+i:=1;
+LOOP
+DBMS_OUTPUT.PUT_LINE('ANUJA');
+i:=i+1;
+EXIT WHEN i>100;
+END LOOP;
+END;
+/
