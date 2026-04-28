@@ -1,0 +1,19 @@
+DECLARE
+a int; 
+b int;
+c int;
+
+BEGIN
+a:=&a;
+b:=&b;
+
+c:=a;
+a:=b;
+b:=c;
+DBMS_OUTPUT.PUT_LINE('value of a='||a);
+DBMS_OUTPUT.PUT_LINE('value of b='||b);
+
+END;
+/
+
+
