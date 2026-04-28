@@ -1,0 +1,39 @@
+DECLARE
+a int;
+b int;
+ans float;
+ch int;
+
+BEGIN
+ch:=&ch;
+a:=&a;
+b:=&b;
+
+CASE ch
+	When 1 Then
+ans:=a+b;
+DBMS_OUTPUT.PUT_LINE('Addition='||ans);
+
+	When 2 Then
+ans:=a-b;
+DBMS_OUTPUT.PUT_LINE('Substraction='||ans);
+
+	When 3 Then
+ans:=a*b;
+DBMS_OUTPUT.PUT_LINE('Multiplication='||ans);
+
+	When 4 Then
+ans:=a/b;
+DBMS_OUTPUT.PUT_LINE('Division='||ans);
+
+	Else
+DBMS_OUTPUT.PUT_LINE('Invalid choice');
+
+END CASE;
+END;
+/
+
+
+
+
+

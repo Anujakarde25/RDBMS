@@ -1,0 +1,36 @@
+DECLARE	
+ans float;
+ch int;
+
+BEGIN
+ch:=&ch;
+
+CASE ch
+    when 1 Then
+DBMS_OUTPUT.PUT_LINE('Monday');
+
+    when 2 Then
+DBMS_OUTPUT.PUT_LINE('Tuesday');
+    
+    when 3 Then
+DBMS_OUTPUT.PUT_LINE('wednesday');
+
+    when 4 Then
+DBMS_OUTPUT.PUT_LINE('thursday');
+    
+    when 5 Then
+DBMS_OUTPUT.PUT_LINE('friday');
+
+    when 6 Then
+DBMS_OUTPUT.PUT_LINE('saturday');
+
+    when 7 Then
+DBMS_OUTPUT.PUT_LINE('sunday');
+
+End CASE;
+END;
+/
+
+ 
+    
+
