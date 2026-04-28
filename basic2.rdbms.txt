@@ -1,0 +1,19 @@
+DECLARE
+u int;
+a int;
+t int;
+v int;
+s int;
+
+BEGIN
+
+u:=&u;
+a:=&a;
+t:=&t;
+v:=u+a*t;
+s:=u+a*t*2;
+DBMS_OUTPUT.PUT_LINE('Final velocity='||v);
+DBMS_OUTPUT.PUT_LINE('Distance Travelled='||s);
+
+END;
+/

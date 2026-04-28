@@ -1,0 +1,17 @@
+DECLARE
+a int;
+b int;
+Am float;
+Hm float;
+
+BEGIN
+
+a:=&a;
+b:=&b;
+Am:=(a+b)/2;
+Hm:=a*b/(a+b);
+DBMS_OUTPUT.PUT_LINE('Arithmatic mean='||Am);
+DBMS_OUTPUT.PUT_LINE('Harmonic mean='||Hm);
+
+END;
+/
