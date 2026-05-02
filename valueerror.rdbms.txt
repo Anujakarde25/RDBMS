@@ -1,0 +1,17 @@
+Declare
+a number(2);
+b number(2);
+ans number(2);
+
+Begin
+a:=&a;
+b:=&b;
+ans:=a/b;
+DBMS_OUTPUT.PUT_LINE('Answer='||ans);
+
+Exception
+When VALUE_ERROR Then
+DBMS_OUTPUT.PUT_LINE('value can not match');
+
+END;
+/
