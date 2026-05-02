@@ -1,0 +1,19 @@
+Declare
+num1 int;
+num2 int;
+ans int;
+
+Begin
+num1:=&num1;
+num2:=&num2;
+ans:=num1/num2;
+DBMS_OUTPUT.PUT_LINE('Answer='||ans);
+
+Exception
+When ZERO_DIVIDE Then
+DBMS_OUTPUT.PUT_LINE('Value can not be divisible by zero');
+
+END;
+/
+
+
