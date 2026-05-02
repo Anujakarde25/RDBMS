@@ -1,0 +1,23 @@
+Create table student(sno int,
+sname char(50),
+per float);
+
+Insert into student values(101,'om',88.79);
+Insert into student values(101,'sai',88.79);
+Insert into student values(102,'ram',98.79);
+
+Declare
+a int;
+u_name char(20);
+
+Begin
+select sname into u_name from student where sno=101;
+DBMS_OUTPUT.PUT_LINE('student name= '||u_name);
+
+Exception
+When TOO_MANY_ROWS Then
+DBMS_OUTPUT.PUT_LINE('kahi tri chukty');
+When OTHERS Then
+DBMS_OUTPUT.PUT_LINE('something went wrong');
+END;
+/
