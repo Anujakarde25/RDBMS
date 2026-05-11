@@ -1,0 +1,17 @@
+Declare 
+num number(10);
+Invalid_mobileno exception;
+
+Begin
+num:=&num;
+if num<10 and num>10 then
+Raise Invalid_mobileno;
+else
+DBMS_OUTPUT.PUT_LINE('correct input');
+end if;
+
+Exception
+When Invalid_mobileno Then
+DBMS_OUTPUT.PUT_LINE('wrong input');
+END;
+/
