@@ -1,0 +1,29 @@
+Declare
+labno number(2);
+labname char(20);
+equipment varchar(35);
+capacity int;
+Invalid_capacity_range exception;
+
+
+Begin
+labno:=&labno;
+labname:='&labname';
+equipment:='&equipment';
+capacity:=&capacity;
+
+if capacity>40 Then
+Raise Invalid_capacity_range;
+else
+insert into lab values(labno,labname,equipment,capacity);
+DBMS_OUTPUT.PUT_LINE('records inserted');
+end if;
+
+Exception
+When Invalid_capacity_range Then
+DBMS_OUTPUT.PUT_LINE('Invalid range entered');
+
+END;
+/
+
+
