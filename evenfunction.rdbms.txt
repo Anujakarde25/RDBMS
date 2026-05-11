@@ -1,0 +1,10 @@
+create or replace function even_odd(num int) return char
+as 
+Begin
+IF num mod 2=0 Then
+return 'even';
+Else
+return 'odd';
+END if;
+END;
+/
