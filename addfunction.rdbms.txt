@@ -1,0 +1,8 @@
+create or replace function add_sum(a int, b int) return int
+as
+c int;
+Begin
+c:=a+b;
+return c;
+END;
+/
