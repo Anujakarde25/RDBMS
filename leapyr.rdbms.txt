@@ -1,0 +1,10 @@
+create or replace function leap_yr(y int) return char
+as
+Begin
+IF y mod 4=0 Then
+return 'leap year';
+Else
+return 'not leap year';
+END IF;
+END;
+/
