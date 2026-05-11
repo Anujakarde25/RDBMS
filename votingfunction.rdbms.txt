@@ -1,0 +1,10 @@
+create or replace function voting_elig(age int) return char
+as
+Begin
+If age>=18 Then
+return 'eligible';
+Else
+return 'not eligible';
+END IF;
+END;
+/ 
