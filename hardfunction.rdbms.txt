@@ -1,0 +1,56 @@
+
+Create table Client(cno int Primary key,
+cname char(21),
+addrs varchar(31),
+DOB date);
+
+create table Policy(pno int primary key,
+descr varchar(21),
+mamt int check(mamt>0),
+pamt int check(pamt>0),
+pdate date);  
+                      
+create table cp(cno int references client(cno),
+pno int references Policy(pno));
+
+insert into client values(101,'Monika','Nashik','5-feb-2007');
+insert into client values(102,'Gaurav','Pune','20-june-2003');
+insert into client values(103,'Tanu','Shrirampur','4-jan-2009');
+
+insert into policy values(1,'Life',40000,1000,'12-may-2007');
+insert into policy values(2,'Care',100000,2100,'28-apr-2005');
+insert into policy values(3,'Home',1000000,40000,'6-nov-2008');
+
+insert into cp values(102,3);
+insert into cp values(103,1);
+insert into cp values(101,2);
+
+Create OR Replace Function policy_fun(pamt int,mamt int) return int
+as
+     ans int;
+Begin
+
+     ans:=mamt-pamt;
+     return ans;
+
+END;
+/
+
+DECLARE
+
+    a policy.pamt%type;
+    b policy.mamt%type;
+    c int;
+    ucno client.cno%type;
+BEGIN
+      
+      ucno:=&ucno;
+     
+     select pamt,mamt into a,b FROM Client,Policy,cp Where Client.cno=cp.cno and Policy.pno=cp.pno and client.cno=ucno;
+
+  c:=policy_fun(a,b);
+
+  DBMS_OUTPUT.PUT_LINE('Total maturityamt='|| c);
+
+END;
+/
